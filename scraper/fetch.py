@@ -88,7 +88,7 @@ RTD_BASE = "https://polk.realtaxdeed.com"
 
 PARCEL_API_URL = ("https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/"
                   "services/Florida_Statewide_Cadastral/FeatureServer/0/query")
-POLK_CO_NO = 53  # FL DOR county number for Polk
+POLK_CO_NO = 63  # FL DOR county number for Polk in the statewide layer (verified live)
 
 LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
 PROBATE_LOOKBACK_DAYS = 60   # probate filings move slow; widen window
@@ -671,23 +671,36 @@ def fetch_realauction(base: str, cat: str, cat_label: str, doc_type: str) -> lis
 # Parcel enrichment (FL DOR statewide cadastral layer, CO_NO=53)
 # ---------------------------------------------------------------------------
 PARCEL_OUTFIELDS = ("PARCEL_ID,OWN_NAME,OWN_ADDR1,OWN_ADDR2,OWN_CITY,"
-                    "OWN_STATE_,OWN_ZIPCD,PHY_ADDR1,PHY_CITY,PHY_ZIPCD,JV")
+                    "OWN_STATE_,OWN_ZIPCD,PHY_ADDR1,PHY_CITY,PHY_ZIPCD,JV,CO_NO")
+
+# NOTE (learned live): only PARCEL_ID is indexed on the statewide layer.
+# A CO_NO filter or any OWN_NAME/PHY_ADDR1 LIKE forces a 10.8M-row scan
+# that times out, so where-clauses go through unwrapped and the LIKE
+# passes use a short timeout plus a circuit breaker.  Polk's CO_NO in
+# this layer is 63 (verified live) and is only used to sanity-check hits.
+ARCGIS_LIKE_TIMEOUT = 12
 
 
-def _arcgis_query(session, where: str, count: int = 5) -> list:
+def _arcgis_query(session, where: str, count: int = 5,
+                  timeout: int = REQUEST_TIMEOUT) -> list | None:
+    """Returns feature list, or None on error/timeout (for circuit breaking)."""
     params = {
-        "where": f"CO_NO={POLK_CO_NO} AND ({where})",
+        "where": where,
         "outFields": PARCEL_OUTFIELDS,
         "returnGeometry": "false",
         "f": "json",
         "resultRecordCount": count,
     }
     try:
-        r = session.get(PARCEL_API_URL, params=params, timeout=REQUEST_TIMEOUT)
-        return r.json().get("features", []) or []
+        r = session.get(PARCEL_API_URL, params=params, timeout=timeout)
+        j = r.json()
+        if j.get("error"):
+            log.debug("ArcGIS error: %s", str(j["error"])[:120])
+            return None
+        return j.get("features", []) or []
     except Exception as exc:
         log.debug("ArcGIS query error: %s", exc)
-        return []
+        return None
 
 
 def _zip5(v) -> str:
@@ -723,36 +736,27 @@ def _addr_key(addr: str) -> tuple:
     return num, rest
 
 
-def _detect_parcel_format(session) -> bool:
-    """True if the layer's PARCEL_ID values contain dashes."""
-    feats = _arcgis_query(session, "PARCEL_ID IS NOT NULL", count=1)
-    if feats:
-        pid = str(feats[0].get("attributes", {}).get("PARCEL_ID") or "")
-        log.info("Parcel layer sample PARCEL_ID: %r", pid)
-        return "-" in pid
-    return False
-
-
 def enrich_parcels(records: list) -> None:
     session = requests.Session()
     session.headers["User-Agent"] = UA
 
-    # PASS 0 -- exact parcel-id join for auction records.
+    # PASS 0 -- exact parcel-id join for auction records (PARCEL_ID is the
+    # only indexed attribute; raw 18-digit, no dashes -- verified live).
     pk = [r for r in records if getattr(r, "parcel_id", "")]
     if pk:
-        dashed = _detect_parcel_format(session)
         log.info("ArcGIS parcel-join for %d records...", len(pk))
         hits = 0
+        fails = 0
         for rec in pk:
-            pid = rec.parcel_id
-            cands = [pid]
-            if dashed and len(pid) == 18:
-                cands.insert(0, "-".join([pid[0:2], pid[2:4], pid[4:6], pid[6:12], pid[12:18]]))
-            feats = []
-            for cand in cands:
-                feats = _arcgis_query(session, f"PARCEL_ID='{_sql_lit(cand)}'", count=1)
-                if feats:
+            feats = _arcgis_query(session, f"PARCEL_ID='{_sql_lit(rec.parcel_id)}'",
+                                  count=1)
+            if feats is None:
+                fails += 1
+                if fails >= 5:
+                    log.warning("ArcGIS parcel-join: 5 consecutive errors -- stopping pass")
                     break
+                continue
+            fails = 0
             if feats:
                 att = feats[0].get("attributes", {})
                 if not rec.owner:
@@ -764,20 +768,28 @@ def enrich_parcels(records: list) -> None:
         log.info("ArcGIS parcel-join: %d mailing fills", hits)
 
     # PASS 1 -- forward by owner name (clerk records have no address at all).
+    # OWN_NAME is NOT indexed on the statewide layer, so these are scans:
+    # short timeout + circuit breaker, and probates (best skip-trace value)
+    # go first.  If Esri ever indexes the field this speeds up on its own.
     fwd = [r for r in records if r.owner and (not r.prop_address or not r.mail_address)]
+    fwd.sort(key=lambda r: (r.cat != "PRO", r.cat != "LP"))
     log.info("ArcGIS owner-lookup for %d records...", len(fwd))
     owner_hits = 0
+    like_fails = 0
     for rec in fwd[:ARCGIS_MAX_LOOKUPS]:
+        if like_fails >= 3:
+            log.warning("ArcGIS owner-lookup: 3 consecutive timeouts -- "
+                        "layer scans too slow, skipping remaining lookups")
+            break
         name = owner_lookup_name(rec.owner)
         if not name or len(name) < 5:
             continue
-        feats = _arcgis_query(session, f"UPPER(OWN_NAME) LIKE '{_sql_lit(name)}%'")
-        if not feats and " " in name and not is_entity(rec.owner):
-            last, first = name.split(" ", 1)
-            for pat in (f"{last}, {first}%", f"{last}%{first}%"):
-                feats = _arcgis_query(session, f"UPPER(OWN_NAME) LIKE '{_sql_lit(pat)}'")
-                if feats:
-                    break
+        feats = _arcgis_query(session, f"OWN_NAME LIKE '{_sql_lit(name)}%'",
+                              timeout=ARCGIS_LIKE_TIMEOUT)
+        if feats is None:
+            like_fails += 1
+            continue
+        like_fails = 0
         if not feats:
             time.sleep(0.12)
             continue
@@ -790,16 +802,26 @@ def enrich_parcels(records: list) -> None:
         time.sleep(0.12)
     log.info("ArcGIS owner-lookup: %d fills", owner_hits)
 
-    # PASS 2 -- reverse by address (auction records with address, no owner).
+    # PASS 2 -- reverse by address (records with address, no owner); also
+    # an unindexed scan, same guard.
     rev = [r for r in records if r.prop_address and not r.owner]
     log.info("ArcGIS address-lookup for %d records...", len(rev))
     addr_hits = 0
+    like_fails = 0
     for rec in rev[:ARCGIS_MAX_LOOKUPS]:
+        if like_fails >= 3:
+            log.warning("ArcGIS address-lookup: 3 consecutive timeouts -- skipping rest")
+            break
         num, core = _addr_key(rec.prop_address)
         if not num or not core:
             continue
         feats = _arcgis_query(session,
-                              f"UPPER(PHY_ADDR1) LIKE '{_sql_lit(num)}%{_sql_lit(core)}%'")
+                              f"PHY_ADDR1 LIKE '{_sql_lit(num)}%{_sql_lit(core)}%'",
+                              timeout=ARCGIS_LIKE_TIMEOUT)
+        if feats is None:
+            like_fails += 1
+            continue
+        like_fails = 0
         if len(feats) == 1:
             att = feats[0].get("attributes", {})
             owner = _norm_ws(att.get("OWN_NAME"))
