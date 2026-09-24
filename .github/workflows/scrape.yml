@@ -31,7 +31,7 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Run pipeline
-        run: python scraper/fetch.py
+        run: python scraper/run_ci.py
         env:
           LOOKBACK_DAYS: "7"
 
