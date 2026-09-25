@@ -1,16 +1,16 @@
 {
-  "fetched_at": "2026-09-24T20:11:06.813394",
+  "fetched_at": "2026-09-25T13:19:44.754126",
   "county": "Polk",
   "source": "Polk County, FL -- Clerk Official Records + RealForeclose/RealTaxdeed Auctions + FL DOR Parcels",
   "date_range": {
-    "start": "2026-09-17",
-    "end": "2026-09-24"
+    "start": "2026-09-18",
+    "end": "2026-09-25"
   },
-  "total": 121,
-  "new_7d": 121,
-  "with_address": 121,
+  "total": 119,
+  "new_7d": 119,
+  "with_address": 119,
   "by_cat": {
-    "FC": 85,
+    "FC": 83,
     "TAXFC": 0,
     "TAXDEED": 36,
     "LP": 0,
@@ -19,74 +19,6 @@
     "PRO": 0
   },
   "records": [
-    {
-      "doc_num": "2025CA004070A000BA",
-      "doc_type": "FORECLOSURE SALE",
-      "cat": "foreclosure",
-      "cat_label": "Foreclosure Auction (Sale 09/24/2026)",
-      "filed": "2026-09-24",
-      "owner": "CRESPO ANGEL L VARGAS",
-      "grantee": "",
-      "amount": 303062.9,
-      "legal": "Auction 09/24/2026 | Parcel 253135486800000020 | Assessed $187,988.00 Plaintiff Max Bid: Hidden &nbsp;",
-      "prop_address": "602 DIXON ST E",
-      "prop_city": "Fort Meade",
-      "prop_state": "FL",
-      "prop_zip": "33841",
-      "mail_address": "602 DIXON ST E",
-      "mail_city": "Fort Meade",
-      "mail_state": "FL",
-      "mail_zip": "33841",
-      "clerk_url": "https://polk.realforeclose.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=09/24/2026",
-      "flags": [
-        "Pre-foreclosure",
-        "Amount > $100k",
-        "New this week",
-        "Has address"
-      ],
-      "score": 75,
-      "status": "NEW",
-      "first_seen": "2026-09-24",
-      "rid": "a92ebe57b85cae3a",
-      "content_hash": "49c226c257512b08",
-      "cat_code": "FC",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "2023CA006450000000",
-      "doc_type": "FORECLOSURE SALE",
-      "cat": "foreclosure",
-      "cat_label": "Foreclosure Auction (Sale 09/25/2026)",
-      "filed": "2026-09-25",
-      "owner": "LEAKE MICHAEL S",
-      "grantee": "",
-      "amount": 262174.21,
-      "legal": "Auction 09/25/2026 | Parcel 242809000000012021 | Assessed $63,001.00 Plaintiff Max Bid: Hidden &nbsp;",
-      "prop_address": "2505 MCARTHUR ST",
-      "prop_city": "Lakeland",
-      "prop_state": "FL",
-      "prop_zip": "33801",
-      "mail_address": "2505 MCARTHUR ST",
-      "mail_city": "Lakeland",
-      "mail_state": "FL",
-      "mail_zip": "33801",
-      "clerk_url": "https://polk.realforeclose.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=09/25/2026",
-      "flags": [
-        "Pre-foreclosure",
-        "Amount > $100k",
-        "New this week",
-        "Has address"
-      ],
-      "score": 75,
-      "status": "NEW",
-      "first_seen": "2026-09-24",
-      "rid": "0aa45bbb4524a97d",
-      "content_hash": "ee7130bcd2cb6aa4",
-      "cat_code": "FC",
-      "absentee": false,
-      "out_of_state": false
-    },
     {
       "doc_num": "2025CA004315A000BA",
       "doc_type": "FORECLOSURE SALE",
@@ -113,7 +45,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "1ef691b5c305a00f",
       "content_hash": "a3c6ce1ff84a7d71",
@@ -147,10 +79,44 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "6b8fd95e0905622f",
       "content_hash": "882e77bb3bfaafe1",
+      "cat_code": "FC",
+      "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "2023CA006450000000",
+      "doc_type": "FORECLOSURE SALE",
+      "cat": "foreclosure",
+      "cat_label": "Foreclosure Auction (Sale 09/25/2026)",
+      "filed": "2026-09-25",
+      "owner": "LEAKE MICHAEL S",
+      "grantee": "",
+      "amount": 262174.21,
+      "legal": "Auction 09/25/2026 | Parcel 242809000000012021 | Assessed $63,001.00 Plaintiff Max Bid: Hidden &nbsp;",
+      "prop_address": "2505 MCARTHUR ST",
+      "prop_city": "Lakeland",
+      "prop_state": "FL",
+      "prop_zip": "33801",
+      "mail_address": "2505 MCARTHUR ST",
+      "mail_city": "Lakeland",
+      "mail_state": "FL",
+      "mail_zip": "33801",
+      "clerk_url": "https://polk.realforeclose.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=09/25/2026",
+      "flags": [
+        "Pre-foreclosure",
+        "Amount > $100k",
+        "New this week",
+        "Has address"
+      ],
+      "score": 75,
+      "status": "EXISTING",
+      "first_seen": "2026-09-24",
+      "rid": "0aa45bbb4524a97d",
+      "content_hash": "ee7130bcd2cb6aa4",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -181,7 +147,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "171cd57bd1a2649d",
       "content_hash": "e0dd387265682130",
@@ -215,7 +181,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "d2770da3a6ea946a",
       "content_hash": "f3ccd8cdb23267ea",
@@ -249,7 +215,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "f6a9bb8ff37d4d0f",
       "content_hash": "deb6c331fa205714",
@@ -283,7 +249,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "bbfdf9e8ba458ffc",
       "content_hash": "74def9202f3874e0",
@@ -317,7 +283,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "dc206f84a0f796c8",
       "content_hash": "8479301c4b7aa7bf",
@@ -351,7 +317,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "6429a4eadb250506",
       "content_hash": "ffdfcdd1da39608f",
@@ -385,7 +351,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "afceed7c891fb886",
       "content_hash": "0446de06988a4508",
@@ -419,7 +385,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "0f6861fb32561a5b",
       "content_hash": "d987259c1b168127",
@@ -453,7 +419,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "e0482069295c9c8a",
       "content_hash": "ace3a5d7fcf2bc19",
@@ -487,7 +453,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "7dce54df5e874ee9",
       "content_hash": "3b2e9ce397185dc4",
@@ -521,7 +487,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "606e569c3a8b08ba",
       "content_hash": "a62143b6898b02b1",
@@ -555,7 +521,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "1c522e10fb753599",
       "content_hash": "9ba41eda3b28f8df",
@@ -589,7 +555,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "2e3a4ea1df892ba1",
       "content_hash": "bb68e1e4ab6233fb",
@@ -623,7 +589,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "412f4fda1be05614",
       "content_hash": "41421735cbd82400",
@@ -657,7 +623,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "350a830e6dd0e074",
       "content_hash": "cf94f11556044d33",
@@ -691,7 +657,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "f0099a24dcef69a5",
       "content_hash": "5fe0590932db2b9c",
@@ -725,7 +691,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "cf50c98eea0625ce",
       "content_hash": "a4899f92f5f2ef78",
@@ -759,7 +725,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "f01bb8abd4b838fc",
       "content_hash": "d933a919259c5e7a",
@@ -793,7 +759,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "04d03cdb86a7fb11",
       "content_hash": "ad6f1cd7eea41a7a",
@@ -827,7 +793,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "c19e99cacdb54f89",
       "content_hash": "4a777dbcc13c759b",
@@ -861,7 +827,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "b35b9f238b1e9bd7",
       "content_hash": "afd740bb2339d88e",
@@ -895,7 +861,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "e44f4429792e8975",
       "content_hash": "5b9f96dd5871bf53",
@@ -929,7 +895,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "529614b325b9eff6",
       "content_hash": "fe176a6549e47cb7",
@@ -963,7 +929,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "0fc674bf438d8ec3",
       "content_hash": "2eded8557e954d60",
@@ -997,7 +963,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "6ced528fa1b16da4",
       "content_hash": "075163408ec31614",
@@ -1031,7 +997,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "0b3b2a8df870eb38",
       "content_hash": "3a762d577cebba44",
@@ -1065,7 +1031,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "ea3c0edb434a40e2",
       "content_hash": "975b0491048a138d",
@@ -1099,7 +1065,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "2fd9670debb51725",
       "content_hash": "a36b0aa81dd4f021",
@@ -1133,7 +1099,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "a6ab05e85e5df90d",
       "content_hash": "2d9eed35c9034eed",
@@ -1167,7 +1133,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "fea00ebfd6732d30",
       "content_hash": "1139329f6691c2d8",
@@ -1181,7 +1147,7 @@
       "cat": "foreclosure",
       "cat_label": "Foreclosure Auction (Sale 10/06/2026)",
       "filed": "2026-10-06",
-      "owner": "",
+      "owner": "FUENTES JORGE",
       "grantee": "",
       "amount": 174363.72,
       "legal": "Auction 10/06/2026 | Parcel 262907684514000250 | Assessed $239,622.00 Plaintiff Max Bid: Hidden &nbsp;",
@@ -1189,10 +1155,10 @@
       "prop_city": "Eagle Lake",
       "prop_state": "FL",
       "prop_zip": "33839",
-      "mail_address": "",
-      "mail_city": "",
+      "mail_address": "136 GERBER DAIRY RD",
+      "mail_city": "Eagle Lake",
       "mail_state": "FL",
-      "mail_zip": "",
+      "mail_zip": "33839",
       "clerk_url": "https://polk.realforeclose.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=10/06/2026",
       "flags": [
         "Pre-foreclosure",
@@ -1201,10 +1167,10 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "CHANGED",
       "first_seen": "2026-09-24",
       "rid": "00e352d7918a998b",
-      "content_hash": "96c33d81f4de75d2",
+      "content_hash": "f69c331d8e98c705",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1235,7 +1201,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "eb1e86694dc658c6",
       "content_hash": "34fe5b1dc901c746",
@@ -1269,7 +1235,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "99f6eea5d48e4ab1",
       "content_hash": "73c639ea9a805d1a",
@@ -1283,7 +1249,7 @@
       "cat": "foreclosure",
       "cat_label": "Foreclosure Auction (Sale 10/06/2026)",
       "filed": "2026-10-06",
-      "owner": "",
+      "owner": "PROPHETE JEAN MAX",
       "grantee": "",
       "amount": 244323.13,
       "legal": "Auction 10/06/2026 | Parcel 232811033000004121 | Assessed $182,460.00 Plaintiff Max Bid: Hidden &nbsp;",
@@ -1291,10 +1257,10 @@
       "prop_city": "Lakeland",
       "prop_state": "FL",
       "prop_zip": "33805",
-      "mail_address": "",
-      "mail_city": "",
+      "mail_address": "1048 ROSELLE AVE",
+      "mail_city": "Lakeland",
       "mail_state": "FL",
-      "mail_zip": "",
+      "mail_zip": "33805",
       "clerk_url": "https://polk.realforeclose.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=10/06/2026",
       "flags": [
         "Pre-foreclosure",
@@ -1303,10 +1269,10 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "CHANGED",
       "first_seen": "2026-09-24",
       "rid": "5c7ec8dc321aca48",
-      "content_hash": "08133ca9bc4289ff",
+      "content_hash": "23635a39961ed26e",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1337,7 +1303,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "61c50d0a3b593afa",
       "content_hash": "465e36a663720d12",
@@ -1371,7 +1337,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "e05767098c63052f",
       "content_hash": "e867c5643ba2249d",
@@ -1405,7 +1371,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "868eea4cfee2815f",
       "content_hash": "303c1187f73ba56e",
@@ -1439,7 +1405,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "32028f0b36637813",
       "content_hash": "684f31e67087a037",
@@ -1473,7 +1439,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "540207d5ffecd0bd",
       "content_hash": "b0f11816eb16c2e4",
@@ -1507,7 +1473,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "093beded64c80c07",
       "content_hash": "2aa81029b37d3f9a",
@@ -1541,7 +1507,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "54ee9445889fd437",
       "content_hash": "765a43ee66725607",
@@ -1575,7 +1541,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "4383e5e2a7d8f68f",
       "content_hash": "3675fdaf6292ee4d",
@@ -1609,7 +1575,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "cc1a1baa45c9c934",
       "content_hash": "43c408ef98322cd4",
@@ -1643,7 +1609,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "d966c13162b37192",
       "content_hash": "e300616f2a573b06",
@@ -1677,7 +1643,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "a94c84ed507adb5a",
       "content_hash": "7310ae070823bf6b",
@@ -1711,7 +1677,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "9823c56683afb619",
       "content_hash": "f61ed9998418cc32",
@@ -1745,7 +1711,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "7bbe283c103c3abd",
       "content_hash": "38228fde9bca16d4",
@@ -1779,7 +1745,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "a85cc243cdf91b7f",
       "content_hash": "374ea93b41def07f",
@@ -1813,7 +1779,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "f12c03fd1df3a3cb",
       "content_hash": "0f18a4405e70f0db",
@@ -1847,7 +1813,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "4004a4988beb35ed",
       "content_hash": "29572b9773aeef44",
@@ -1881,7 +1847,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "4c0f692148eeac1c",
       "content_hash": "985f714cf9f45f2b",
@@ -1915,7 +1881,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "e96b04cc6daa64f2",
       "content_hash": "639b05320cb44906",
@@ -1949,7 +1915,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "2891079a62455e23",
       "content_hash": "24dac1f6b2c2569d",
@@ -1983,7 +1949,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "97ef6e7b3eeb132f",
       "content_hash": "a413bf90444703c8",
@@ -2017,7 +1983,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "498783562a9d9f1f",
       "content_hash": "5f07abcea1962697",
@@ -2051,7 +2017,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "69f4a3056d5291d4",
       "content_hash": "39cb6f65552c06e3",
@@ -2085,7 +2051,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "8183c20497e830ab",
       "content_hash": "affcbcbccf71f6e1",
@@ -2119,7 +2085,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "5152eab6a640b492",
       "content_hash": "f9e62dd76b77b6c8",
@@ -2153,7 +2119,7 @@
         "Has address"
       ],
       "score": 75,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "0167328b1525663c",
       "content_hash": "0a7cf0fcaa39d61e",
@@ -2187,7 +2153,7 @@
         "Has address"
       ],
       "score": 70,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "c6d237e7511a896a",
       "content_hash": "f1024a5011028b31",
@@ -2221,7 +2187,7 @@
         "Has address"
       ],
       "score": 70,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "617279a8fed8a620",
       "content_hash": "4b630d9238995bed",
@@ -2235,7 +2201,7 @@
       "cat": "foreclosure",
       "cat_label": "Foreclosure Auction (Sale 10/06/2026)",
       "filed": "2026-10-06",
-      "owner": "",
+      "owner": "BRASKO DONNA",
       "grantee": "",
       "amount": 70590.71,
       "legal": "Auction 10/06/2026 | Parcel 282918937101000430 | Assessed $39,955.00 Plaintiff Max Bid: Hidden &nbsp;",
@@ -2243,10 +2209,10 @@
       "prop_city": "Lake Wales",
       "prop_state": "FL",
       "prop_zip": "33853",
-      "mail_address": "",
-      "mail_city": "",
+      "mail_address": "2753 FAST TROT TRL",
+      "mail_city": "Lake Wales",
       "mail_state": "FL",
-      "mail_zip": "",
+      "mail_zip": "33898",
       "clerk_url": "https://polk.realforeclose.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=10/06/2026",
       "flags": [
         "Pre-foreclosure",
@@ -2255,10 +2221,10 @@
         "Has address"
       ],
       "score": 70,
-      "status": "NEW",
+      "status": "CHANGED",
       "first_seen": "2026-09-24",
       "rid": "ffe67670dbce7878",
-      "content_hash": "5eff7b8ea3cdbb71",
+      "content_hash": "6ca3898270928cab",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2289,7 +2255,7 @@
         "Has address"
       ],
       "score": 70,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "d4643cc445081c00",
       "content_hash": "6c781abb3dec6d95",
@@ -2323,7 +2289,7 @@
         "Has address"
       ],
       "score": 70,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "0389aeb5ce288db2",
       "content_hash": "f98977edc08593c0",
@@ -2357,7 +2323,7 @@
         "Has address"
       ],
       "score": 70,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "381e4dfa8cde70e7",
       "content_hash": "41035a09fa6b4007",
@@ -2391,45 +2357,12 @@
         "Has address"
       ],
       "score": 70,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "fb5794ae3cd42313",
       "content_hash": "05c850f4aa3420c6",
       "cat_code": "FC",
       "absentee": true,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "2025CC007468A000BA",
-      "doc_type": "FORECLOSURE SALE",
-      "cat": "foreclosure",
-      "cat_label": "Foreclosure Auction (Sale 09/24/2026)",
-      "filed": "2026-09-24",
-      "owner": "WATSON CRYSTAL R",
-      "grantee": "",
-      "amount": 8715.34,
-      "legal": "Auction 09/24/2026 | Parcel 232922141796002210 | Assessed $210,692.00 Plaintiff Max Bid: Hidden &nbsp;",
-      "prop_address": "6408 TORRINGTON CIR",
-      "prop_city": "Lakeland",
-      "prop_state": "FL",
-      "prop_zip": "33811",
-      "mail_address": "6408 TORRINGTON CIR",
-      "mail_city": "Lakeland",
-      "mail_state": "FL",
-      "mail_zip": "33811",
-      "clerk_url": "https://polk.realforeclose.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=09/24/2026",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week",
-        "Has address"
-      ],
-      "score": 60,
-      "status": "NEW",
-      "first_seen": "2026-09-24",
-      "rid": "56ac0f92aa6b1253",
-      "content_hash": "2207e63cb7038eaf",
-      "cat_code": "FC",
-      "absentee": false,
       "out_of_state": false
     },
     {
@@ -2457,7 +2390,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "eccaee06f4e7b2f8",
       "content_hash": "f290653d1107558a",
@@ -2490,7 +2423,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "9ee5cff1d0a9189a",
       "content_hash": "b351d4eed0547ca5",
@@ -2523,7 +2456,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "855ebb8aaafa0159",
       "content_hash": "70254e0c7b42ba95",
@@ -2556,7 +2489,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "afe6341f1e758754",
       "content_hash": "628f9bd6c5ed1986",
@@ -2589,7 +2522,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "f5bf6a9082eada15",
       "content_hash": "8cf750ee002c0989",
@@ -2622,7 +2555,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "937a574e4fbec999",
       "content_hash": "dbe10208813bc298",
@@ -2655,7 +2588,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "723cee5f00a8c36a",
       "content_hash": "22be14bc04ee94b9",
@@ -2688,7 +2621,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "6ebc14cddeeb564b",
       "content_hash": "ce5372436a298b3a",
@@ -2721,7 +2654,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "be93029a93e103a0",
       "content_hash": "8dceb5689c8c2338",
@@ -2754,7 +2687,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "1478e461f660755b",
       "content_hash": "c828614defe97dc5",
@@ -2787,7 +2720,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "13c2e57af800afa8",
       "content_hash": "75755ab6b8ecda1d",
@@ -2820,7 +2753,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "57b5cda8ed9cc3f1",
       "content_hash": "36d59284452f2c73",
@@ -2853,7 +2786,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "ced9e3cb510d78a0",
       "content_hash": "f379ddefff6cc4b8",
@@ -2886,7 +2819,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "28a643e050760691",
       "content_hash": "d0dd674737c7c822",
@@ -2920,7 +2853,7 @@
         "Has address"
       ],
       "score": 60,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "1e68ca08596347da",
       "content_hash": "59dc1635f33d48cd",
@@ -2953,7 +2886,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "0d9aa3fe4df9b4c2",
       "content_hash": "bceaabc9df2ace21",
@@ -2986,7 +2919,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "db3a0c091428028c",
       "content_hash": "fdf5c3ee52eeb4cf",
@@ -3019,7 +2952,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "f97d69e99dafbe14",
       "content_hash": "63aba3d109c109d8",
@@ -3052,7 +2985,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "6e84528bfcd82344",
       "content_hash": "d203c3f630e458e3",
@@ -3085,7 +3018,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "d10972299fcc7361",
       "content_hash": "300393ecd472890c",
@@ -3118,7 +3051,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "0751c753f2da9f99",
       "content_hash": "dc89562af41a5f0c",
@@ -3151,7 +3084,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "23e1a88187ace50f",
       "content_hash": "e8b76900e57172b4",
@@ -3184,7 +3117,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "dd3c2ac4b245edde",
       "content_hash": "b9a6f0a29b4391fb",
@@ -3217,7 +3150,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "6810297579176e4c",
       "content_hash": "55c288c084e512fa",
@@ -3250,7 +3183,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "46772eab3ef127b1",
       "content_hash": "49bbf9cb474ab457",
@@ -3283,7 +3216,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "bdaaab5e85e56ab2",
       "content_hash": "e0d3c54c0a5048d7",
@@ -3316,7 +3249,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "8697c5f5434f65a5",
       "content_hash": "d4eae38a347f5616",
@@ -3349,7 +3282,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "bcedfd752eb30e88",
       "content_hash": "ee72534d0c6a96a4",
@@ -3382,7 +3315,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "1fef768f127e9ba4",
       "content_hash": "36f2469b90038947",
@@ -3415,7 +3348,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "380aff72bea14bb8",
       "content_hash": "6b306290575e20a3",
@@ -3448,7 +3381,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "100667828fa53187",
       "content_hash": "b0d966a6dd9819c9",
@@ -3481,7 +3414,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "31e580ab887fcb42",
       "content_hash": "f446039aca68bbb4",
@@ -3514,7 +3447,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "acef3d878bafb7a8",
       "content_hash": "2449364d2912258c",
@@ -3547,7 +3480,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "711a6294ba475ea7",
       "content_hash": "45f7754ec7981623",
@@ -3580,7 +3513,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "2131740da81ca091",
       "content_hash": "5c544bbc26f5fea9",
@@ -3613,7 +3546,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "1f077f64b5a5f98a",
       "content_hash": "9aac36fcc234a011",
@@ -3646,7 +3579,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "e7a874b2e7327755",
       "content_hash": "db9b83429bcc6459",
@@ -3679,7 +3612,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "435425d93ecb256e",
       "content_hash": "fc147f9b3b0c612c",
@@ -3712,7 +3645,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "cd0c44dedc0538ec",
       "content_hash": "3587bf9c93cdf869",
@@ -3745,7 +3678,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "5558d461ae844ce6",
       "content_hash": "1201339a205feb0b",
@@ -3778,7 +3711,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "855f4239811abbb2",
       "content_hash": "8063f7d63a7f55cb",
@@ -3811,7 +3744,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "a5f511c9d3cc2e7d",
       "content_hash": "37b5965ee715c1f1",
@@ -3844,7 +3777,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "8473f008932332ea",
       "content_hash": "738ce2ab3ccfedf3",
@@ -3877,7 +3810,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "deb5fddb4d476d65",
       "content_hash": "48f5473cc3b1a925",
@@ -3910,7 +3843,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "a50062e3d003d5bf",
       "content_hash": "ce8783abfa6358e9",
@@ -3943,7 +3876,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "d1bb4336c020e059",
       "content_hash": "3bd763ecf155ebd2",
@@ -3976,7 +3909,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "4104862777dd4ccb",
       "content_hash": "15f7bf414c796fe5",
@@ -4009,7 +3942,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "8e2d18aad39677c2",
       "content_hash": "e647d048c6691840",
@@ -4042,7 +3975,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "bd18671d2c9fe0ca",
       "content_hash": "4a04c7897006e3a5",
@@ -4075,7 +4008,7 @@
         "Has address"
       ],
       "score": 50,
-      "status": "NEW",
+      "status": "EXISTING",
       "first_seen": "2026-09-24",
       "rid": "9a1cfff224838cd2",
       "content_hash": "8f73e7737160e8a8",
