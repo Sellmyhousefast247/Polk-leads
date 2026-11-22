@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-11-21T19:56:35.741928",
+  "fetched_at": "2026-11-22T20:09:47.906282",
   "county": "Polk",
   "source": "Polk County, FL -- Clerk Official Records + RealForeclose/RealTaxdeed Auctions + FL DOR Parcels",
   "date_range": {
-    "start": "2026-11-14",
-    "end": "2026-11-21"
+    "start": "2026-11-15",
+    "end": "2026-11-22"
   },
   "total": 174,
   "new_7d": 67,
